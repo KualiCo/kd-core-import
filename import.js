@@ -2,11 +2,11 @@ var request = require('request-json')
 var papa = require('papaparse')
 var fs = require('fs')
 
-var authToken = ''
+var apiKey = ''
 var baseUrl = 'https://taddgiles-tst.kuali.co/api/v1/'
 
 var client = request.createClient(baseUrl)
-client.headers['Authorization'] = 'Bearer ' + authToken
+client.headers['Authorization'] = 'Bearer ' + apiKey
 
 var csv = fs.readFileSync('./users.csv', 'utf8')
 

@@ -1,10 +1,10 @@
 var request = require('request-json')
 
-var authToken = ''
+var apiKey = ''
 var baseUrl = 'https://taddgiles-tst.kuali.co/api/v1/'
 
 var client = request.createClient(baseUrl)
-client.headers['Authorization'] = 'Bearer ' + authToken
+client.headers['Authorization'] = 'Bearer ' + apiKey
 
 client.get('users/', function(err, res, body) {
   if(err) return console.log(err)
